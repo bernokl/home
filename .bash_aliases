@@ -1,3 +1,4 @@
+#!/bin/bash
 # nice graphical git log, this one is set to view matt
 alias g-log='git log $1  --oneline --graph --decorate --color'
 # turn on the git repo prompt
@@ -21,6 +22,14 @@ alias alias-vi='vi ~/.bash_aliases'
 
 
 ### Funtions ####
+
+##------------------------------------ ##
+ #           -- alias-local --           #
+##---------source local alias----------##
+
+if [ -f ~/repos/home/.local_aliases ]; then
+    . ~/repos/home/.local_aliases
+fi
 ##------------------------------------ ##
  #           -- new-alias --           #
  #          $1 = alias new             #
