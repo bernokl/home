@@ -1,3 +1,4 @@
+#!/bin/bash
 # nice graphical git log, this one is set to view matt
 alias g-log='git log $1  --oneline --graph --decorate --color'
 # turn on the git repo prompt
@@ -21,6 +22,14 @@ alias alias-vi='vi ~/.bash_aliases'
 
 
 ### Funtions ####
+
+##------------------------------------ ##
+ #           -- alias-local --           #
+##---------source local alias----------##
+
+if [ -f ~/repos/home/.local_aliases ]; then
+    . ~/repos/home/.local_aliases
+fi
 ##------------------------------------ ##
  #           -- new-alias --           #
  #          $1 = alias new             #
@@ -64,6 +73,10 @@ alias ps-grep='ps faux | grep -i $1'
 ##cd home$
 alias cd-h='cd /home/bernokl'
 ##Goes to repo dir$
-alias cd-rep='cd /home/bernokl/repos'
+alias cd-rep='cd ~/repos'
 ##Grep history for a key word$
 alias grep-hist='history | grep -i $1'
+##Starts teminator to my specification$
+alias term='terminator --geometry=1024x400+0+0'
+##top processes by memory usage$
+alias ps-mem='ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -5'
