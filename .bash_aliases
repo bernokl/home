@@ -2,7 +2,7 @@
 # nice graphical git log, this one is set to view matt
 alias g-log='git log $1  --oneline --graph --decorate --color'
 # turn on the git repo prompt
-alias gp='source /home/bernokl/repos/bash-git-prompt/gitprompt.sh'
+alias gp='source ~/repos/bash-git-prompt/gitprompt.sh'
 # Start pythn simplehttp server http [port] ie http 987, defaults to localhost
 alias http="python -m SimpleHTTPServer"
 #vi bash_alias
@@ -73,6 +73,8 @@ alias ps-grep='ps faux | grep -i $1'
 ##cd home$
 alias cd-h='cd /home/bernokl'
 ##Goes to repo dir$
-alias cd-rep='cd /home/bernokl/repos'
+alias cd-rep='cd ~/repos'
 ##Grep history for a key word$
 alias grep-hist='history | grep -i $1'
+##Starts teminator to my specification$
+alias term='terminator --geometry=1024x400+0+0'
