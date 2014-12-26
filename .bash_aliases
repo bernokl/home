@@ -80,3 +80,7 @@ alias grep-hist='history | grep -i $1'
 alias term='terminator --geometry=1024x400+0+0'
 ##top processes by memory usage$
 alias ps-mem='ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -5'
+##quick case insensitive grep$
+alias gr-i='grep -i $1'
+##SSh dw100 as berno$
+alias dw100='ssh berno@dw100.colo'
