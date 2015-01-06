@@ -86,3 +86,7 @@ alias gr-i='grep -i $1'
 alias dw100='ssh berno@dw100.colo'
 ##Change directory to /home/bkleinha/projects$
 alias cdp='cd /home/bkleinha/projects/'
+##quick cssh to all webs$
+alias ssh-web='cssh web0{0{1..9},{10..25}}.colo'
+##cssh to memcache tier$
+alias ssh-memcache='cssh memcache0{0{1..9},10}.colo'
