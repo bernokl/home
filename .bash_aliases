@@ -1,6 +1,6 @@
 #!/bin/bash
 # nice graphical git log, this one is set to view matt
-alias g-log='git log $1  --oneline --graph --decorate --color'
+alias gitl-nice='git log $1  --oneline --graph --decorate --color'
 # turn on the git repo prompt
 alias gp='source /home/bkleinha/projects/bash-git-prompt/gitprompt.sh'
 # Start pythn simplehttp server http [port] ie http 987, defaults to localhost
@@ -10,17 +10,6 @@ alias vi-alias='vi ~/.bash_aliases'
 #vi bash_alias
 alias alias-vi='vi ~/.bash_aliases'
 
-
-
-
-
-
-
-
-
-
-
-
 ### Funtions ####
 
 ##------------------------------------ ##
@@ -29,6 +18,9 @@ alias alias-vi='vi ~/.bash_aliases'
 
 if [ -f ~/repos/home/.local_aliases ]; then
     . ~/repos/home/.local_aliases
+fi
+if [ -f ~/projects/home/.local_aliases ]; then
+    . ~/projects/home/.local_aliases
 fi
 ##------------------------------------ ##
  #           -- new-alias --           #
@@ -72,8 +64,6 @@ alias alias-l='cat ~/.bash_aliases | grep -b1 "^alias"'
 alias ps-grep='ps faux | grep -i $1'
 ##cd home$
 alias cd-h='cd /home/bernokl'
-##Goes to repo dir$
-alias cd-rep='cd ~/repos'
 ##Grep history for a key word$
 alias grep-hist='history | grep -i $1'
 ##Starts teminator to my specification$
@@ -90,3 +80,7 @@ alias cdp='cd /home/bkleinha/projects/'
 alias ssh-web='cssh web0{0{1..9},{10..25}}.colo'
 ##cssh to memcache tier$
 alias ssh-memcache='cssh memcache0{0{1..9},10}.colo'
+##use vim whenever I type vi$
+alias vi='vim'
+##Easy way to see last 10 commits$
+alias gitl-one='git log --oneline | head'
