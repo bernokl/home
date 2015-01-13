@@ -56,6 +56,36 @@ alias-new () {
   echo -e "##$DESC$\nalias $NAME='$DEFINTION'" >> ~/.bash_aliases
   . ~/.bash_aliases
 }
+
+## Adding new local aliases
+alias-new-l () {
+  if [ -z "$1" ]; then
+    echo "alias name:"
+    read NAME
+  else
+    NAME=$1
+  fi
+  if [ -z "$2" ]; then
+    echo "alias definition:"
+    read DEFINTION
+  else
+    if [ "$2" = "-cd" ]; then
+      DEFINTION='cd '
+    else
+      DEFINTION=$2
+    fi
+  fi
+
+  if [ -z "$3" ]; then
+    echo "alias description:"
+    read DESC
+  else
+    NAME=$3
+  fi
+  echo -e "##$DESC$\nalias $NAME='$DEFINTION'" >> ~/projects/home/.local_aliases
+ . ~/.bash_aliases
+}
+
 ## Source alias$
 alias alias-s='. ~/.bash_aliases'
 #List aliases$
@@ -77,10 +107,6 @@ alias dw100='ssh berno@dw100.colo'
 ##Change directory to /home/bkleinha/projects$
 alias cdp='cd /home/bkleinha/projects/'
 ##quick cssh to all webs$
-alias ssh-web='cssh web0{0{1..9},{10..25}}.colo'
-##cssh to memcache tier$
-alias ssh-memcache='cssh memcache0{0{1..9},10}.colo'
-##use vim whenever I type vi$
 alias vi='vim'
 ##Easy way to see last 10 commits$
 alias gitl-one='git log --oneline | head'
