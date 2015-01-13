@@ -110,3 +110,5 @@ alias cdp='cd /home/bkleinha/projects/'
 alias vi='vim'
 ##Easy way to see last 10 commits$
 alias gitl-one='git log --oneline | head'
+##list the directory by time desc and run tail$
+alias ls-tail='ls -alrt | tail'
