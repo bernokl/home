@@ -112,7 +112,7 @@ alias vi='vim'
 alias gitl-one='git log --oneline | head'
 ##Sort dir by reverse date and limit$
 alias ls-rtail='ls -alrt | tail -$1'
-##ssh to berno digo salt-master$
-#alias salt-master-digo='ssh -i /home/bkleinha/.ssh/berno_digo root@104.131.69.145'
 ##Grep -v any comments and spaces in a file$
 alias grep-vc='egrep -v "(^#.*|^$)"'
+##list the directory by time desc and run tail$
+alias ls-tail='ls -alrt | tail'
