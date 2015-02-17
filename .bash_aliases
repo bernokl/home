@@ -116,3 +116,5 @@ alias ls-rtail='ls -alrt | tail -$1'
 alias grep-vc='egrep -v "(^#.*|^$)"'
 ##list the directory by time desc and run tail$
 alias ls-tail='ls -alrt | tail'
+##SSH To first ic salt master$
+alias ic-master='ssh berno@172.25.0.25'
