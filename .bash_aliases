@@ -22,6 +22,9 @@ fi
 if [ -f ~/projects/home/.local_aliases ]; then
     . ~/projects/home/.local_aliases
 fi
+if [ -f ~/projects/home/.tw_aliases ]; then
+    . ~/projects/home/.tw_aliases
+fi
 ##------------------------------------ ##
  #           -- new-alias --           #
  #          $1 = alias new             #
@@ -102,8 +105,6 @@ alias term='terminator --geometry=1024x400+0+0 & exit'
 alias ps-mem='ps -eo pmem,pcpu,vsize,pid,cmd | sort -k 1 -nr | head -5'
 ##quick case insensitive grep$
 alias gr-i='grep -i $1'
-##SSh dw100 as berno$
-alias dw100='ssh berno@dw100.colo'
 ##Change directory to /home/bkleinha/projects$
 alias cdp='cd /home/bkleinha/projects/'
 ##quick cssh to all webs$
@@ -114,7 +115,11 @@ alias gitl-one='git log --oneline | head'
 alias ls-rtail='ls -alrt | tail -$1'
 ##Grep -v any comments and spaces in a file$
 alias grep-vc='egrep -v "(^#.*|^$)"'
+##Cat file and grep -v any comments and spaces in a file$
+alias cat-vc='cat $1 | egrep -v "(^#.*|^$)"'
 ##list the directory by time desc and run tail$
 alias ls-tail='ls -alrt | tail'
 ##SSH To first ic salt master$
 alias ic-master='ssh berno@172.25.0.25'
+##calling python bin using py$
+alias py='/usr/bin/python2.7'
